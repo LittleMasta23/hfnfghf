@@ -16,7 +16,7 @@ coroutine.wrap(function()
             rconsoleprint("@@LIGHT_CYAN@@")
             rconsoleprint("Waiting for game...\n")
             repeat wait() until game:GetService("Workspace") ~= nil and game:GetService("Workspace"):FindFirstChild("WORKSPACE_Entities") and game:GetService("Workspace")["WORKSPACE_Entities"]:FindFirstChild("Animals") and game:GetService("Workspace")["WORKSPACE_Entities"].Animals:FindFirstChildOfClass("Model") and game:GetService("Workspace"):FindFirstChild("WORKSPACE_Geometry")
-            wait(2)
+            wait(5)
             local objects = {}
             local exists = false
             local c = 0
@@ -142,12 +142,12 @@ coroutine.wrap(function()
             rconsoleprint("Teleporting to Server: ")
             rconsoleprint("@@LIGHT_CYAN@@")
             rconsoleprint(new.."\n")
-            wait(2)
+            wait(3)
             TPService:TeleportToPlaceInstance(game.PlaceId, Servers.data[new].id)
         end
     ]]
     
     writefile("penis.lua", script)
-    wait(0.5)
+    wait(2)
     loadstring(readfile("penis.lua"))()
 end)()
